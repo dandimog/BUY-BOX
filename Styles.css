@@ -84,6 +84,7 @@ body {
     width: 508px;
     height: 30px;
 
+    border-style: solid;
     border-color: #cdcbcb;
     color: #cdcbcb;
 
@@ -96,13 +97,43 @@ body {
 }
 
 .bl-product {
-    height: 32px;
+    height: 30px;
 
     padding: 15px;
 
-    border-color: #cdcbcb;
-
     position: relative;
+
+    font-family: sans-serif;
+
+    border-color: #cdcbcb white;
+    border-style: solid;
+    border-width: 0.01mm;
+}
+
+.tomatoes {
+    float: left;
+
+    height: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.add_or_del {
+    position: absolute;
+
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .button_sub {
@@ -111,55 +142,36 @@ body {
 
     border: 0;
 
-    background: #bf656e;
+    background: #e699b5;
     color: white;
 
     border-radius: 15px;
 }
+
+.textArea_2 {
+    width: 30px;
+    height: 26px;
+
+    border: 0;
+    padding: 0;
+
+    margin: 3px 7px;
+
+    border-radius: 3px;
+
+    background: #ebe9e9;
+
+    text-align: center;
+}
+
 .button_add {
     width: 30px;
     height: 30px;
 
     border: 0;
 
-    background: #00a800;
+    background: #3ed339;
     color: white;
 
     border-radius: 15px;
-}
-.tomatoes {
-    float: left;
-
-    height: 32px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.textArea_2 {
-    width: 30px;
-    height: 30px;
-
-    border: 10px;
-
-    border-radius: 3px;
-
-    background: #cdcbcb;
-
-    text-align: center;
-}
-
-.add_or_del {
-    position: absolute;
-
-    right:  0;
-    left:  0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
