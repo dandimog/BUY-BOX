@@ -1,0 +1,165 @@
+body {
+    background: #cdcbcb;
+    margin: 0;
+}
+
+.bl-background {
+    width: 980px;
+    height: 240px;
+
+    background: #cdcbcb;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding-top: 7%;
+}
+
+.bl-list {
+    width: 640px;
+    height: 240px;
+
+    background: #cdcbcb;
+
+    padding: 10px;
+
+    border-radius: 3px;
+}
+
+.bl-bought {
+    width: 300px;
+    height: 240px;
+
+    padding: 10px;
+
+    background: #cdcbcb;
+}
+
+.bl-row-padding {
+    padding: 10px;
+
+    border-radius: 3px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    background: white;
+    border-color: #cdcbcb;
+}
+
+.bl-row {
+    background: white;
+    border-radius: 3px;
+}
+
+.bl-label {
+    background: #cdcbcb;
+}
+
+.bl-plus {
+    background: #04a613;
+}
+
+.button {
+    width: 100px;
+    height: 34px;
+
+    color: white;
+    background-color: blue;
+
+    padding: 0;
+    border: 0;
+
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+
+    float: right;
+}
+
+.textArea {
+    width: 508px;
+    height: 30px;
+
+    border-color: #cdcbcb;
+    color: #cdcbcb;
+
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+
+    padding-left: 10px;
+
+    border-width: 1px;
+}
+
+.bl-product {
+    height: 32px;
+
+    padding: 15px;
+
+    border-color: #cdcbcb;
+
+    position: relative;
+}
+
+.button_sub {
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+
+    background: #bf656e;
+    color: white;
+
+    border-radius: 15px;
+}
+.button_add {
+    width: 30px;
+    height: 30px;
+
+    border: 0;
+
+    background: #00a800;
+    color: white;
+
+    border-radius: 15px;
+}
+.tomatoes {
+    float: left;
+
+    height: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textArea_2 {
+    width: 30px;
+    height: 30px;
+
+    border: 10px;
+
+    border-radius: 3px;
+
+    background: #cdcbcb;
+
+    text-align: center;
+}
+
+.add_or_del {
+    position: absolute;
+
+    right:  0;
+    left:  0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
