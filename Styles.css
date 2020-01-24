@@ -37,6 +37,7 @@ body {
     padding: 10px;
 
     background: #cdcbcb;
+
 }
 
 .bl-row-padding {
@@ -54,6 +55,8 @@ body {
 .bl-row {
     background: white;
     border-radius: 3px;
+    height: 100%;
+    width: 100%;
 }
 
 .bl-label {
@@ -174,4 +177,15 @@ body {
     color: white;
 
     border-radius: 15px;
+}
+
+.bl-title {
+    height: 15%;
+    width: 100%;
+    border-bottom: 1px solid black;
+    float: left;
+    padding-top: 5%;
+
+
+
 }
