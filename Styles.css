@@ -63,14 +63,6 @@ body {
     border-bottom-style: solid;
 }
 
-.bl-label {
-    background: #cdcbcb;
-}
-
-.bl-plus {
-    background: #04a613;
-}
-
 .button {
     width: 28.1%;
     height: 34px;
@@ -249,7 +241,6 @@ body {
 .animated-button-bottom {
     height: 50%;
     width: 100%;
-    /*opacity: 0;*/
     visibility: hidden;
 
     background-color: darkviolet;
@@ -258,6 +249,9 @@ body {
     font-size: small;
     font-family: sans-serif;
     color: white;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 
     transition: all 1s ease;
 
@@ -275,5 +269,24 @@ body {
 .animated-button-top:hover + .animated-button-bottom {
     background-color: blue;
     visibility: visible;
-    /*opacity: 100%;*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.new {
+    width: 55%;
+    height: 45%;
+    padding-left: 25%;
+    padding-right: 20%;
+    text-align: left;
+    padding-top: 5%;
+}
+.newp {
+    width: 55%;
+    height: 47%;
+    padding-left: 25%;
+    padding-right: 20%;
+    padding-bottom: 3%;
+    text-align: left;
+    font-size: medium;
+    font-weight: bold;
 }
