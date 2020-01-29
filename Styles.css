@@ -3,9 +3,9 @@ body {
     margin: 0;
 }
 
-.bl-background {
+.grand-container {
     width: 980px;
-    height: 240px;
+    height: 50%;
 
     background: #cdcbcb;
 
@@ -19,44 +19,48 @@ body {
     padding-top: 7%;
 }
 
-.bl-list {
-    width: 640px;
-    height: 240px;
+.container-left-side {
+    width: 70%;
+    height: 100%;
 
     background: #cdcbcb;
 
-    padding: 10px;
+    padding: 1%;
 
     border-radius: 3px;
 }
 
-.bl-bought {
-    width: 300px;
-    height: 240px;
-
+.container-right-side {
+    width: 30%;
+    /*height: 240px;*/
+    height: 100%;
     padding: 10px;
 
     background: #cdcbcb;
+}
 
+.bl-row {
+    background: white;
+    border-radius: 3px;
+
+    height: 100%;
 }
 
 .bl-row-padding {
     padding: 10px;
 
-    border-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 
     margin-left: auto;
     margin-right: auto;
 
     background: white;
     border-color: #cdcbcb;
-}
 
-.bl-row {
-    background: white;
-    border-radius: 3px;
-    height: 100%;
-    width: 100%;
+    border-bottom-width: thin;
+    border-bottom-color: #cdcbcb;
+    border-bottom-style: solid;
 }
 
 .bl-label {
@@ -68,7 +72,7 @@ body {
 }
 
 .button {
-    width: 100px;
+    width: 28.1%;
     height: 34px;
 
     color: white;
@@ -82,9 +86,13 @@ body {
 
     float: right;
 }
+/*.standard {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
 
 .textArea {
-    width: 508px;
+    width: 70%;
     height: 30px;
 
     border-style: solid;
@@ -94,7 +102,7 @@ body {
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
 
-    padding-left: 10px;
+    padding-left: 1.5%;
 
     border-width: 1px;
 }
@@ -108,9 +116,13 @@ body {
 
     font-family: sans-serif;
 
-    border-color: #cdcbcb white;
-    border-style: solid;
-    border-width: 0.01mm;
+    border-bottom-width: thin;
+    border-bottom-color: #cdcbcb;
+    border-bottom-style: solid;
+
+    /*border-color: #cdcbcb white;*/
+    /*border-style: solid;*/
+    /*border-width: thin;*/
 }
 
 .tomatoes {
@@ -139,7 +151,7 @@ body {
     justify-content: center;
 }
 
-.button_sub {
+.subtraction-button {
     width: 30px;
     height: 30px;
 
@@ -167,11 +179,13 @@ body {
     text-align: center;
 }
 
-.button_add {
+.addition-button {
     width: 30px;
     height: 30px;
 
     border: 0;
+
+    text-align: center;
 
     background: #3ed339;
     color: white;
@@ -180,12 +194,86 @@ body {
 }
 
 .bl-title {
-    height: 15%;
+    font-family: sans-serif;
+    padding: 5%;
+
+    height: 25%;
     width: 100%;
-    border-bottom: 1px solid black;
-    float: left;
-    padding-top: 5%;
 
+    border-bottom-color: #cdcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+}
 
+.animated-button-container {
+    width: 16%;
+    height: 14%;
 
+    padding-left: 4%;
+    margin-right: 80%;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*почему не работает с абсолют*/
+}
+
+.animated-button-top {
+    height: 50%;
+    width: 100%;
+
+    position: relative;
+    top: 50%;
+
+    background-color: darkviolet;
+
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    transition: all 1s ease;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-button-bottom {
+    height: 50%;
+    width: 100%;
+    /*opacity: 0;*/
+    visibility: hidden;
+
+    background-color: darkviolet;
+
+    text-align: center;
+    font-size: small;
+    font-family: sans-serif;
+    color: white;
+
+    transition: all 1s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.animated-button-top:hover {
+    background-color: blue;
+    transform: translate(0,-100%);
+}
+.animated-button-top:hover + .animated-button-bottom {
+    background-color: blue;
+    visibility: visible;
+    /*opacity: 100%;*/
 }
