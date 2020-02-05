@@ -1,16 +1,63 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
-    background: #cdcbcb;
+    background: #DADADA;
     margin: 0;
 }
 
-.grand-container {
-    width: 980px;
-    height: 50%;
+/*:active, :hover, :focus {*/
+/*    outline: 0;*/
+/*    outline-offset: 0;*/
+/*}*/
 
-    background: #cdcbcb;
+button {
+    outline: none;
+}
 
-    margin-left: auto;
-    margin-right: auto;
+[data-tooltip] {
+    position: relative;
+
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+
+    width: 0; height: 0;
+    left: 50%; top: 50%;
+
+    background: darkviolet;
+    color: white; text-align: center;
+
+    font-size: 0;
+    padding: 0.5em;
+
+    border-radius: 10px;
+
+    pointer-events: none; /* Подсказка */
+
+    opacity: 0; transition: 1s;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+
+    height: 16px; width: 100px;
+    top: -100%; left: -130%;
+
+    font-size: small;
+}
+
+.my-grand-container {
+    width: 1100px; height: 50%;
+
+    background: #DADADA;
+
+    margin-left: auto; margin-right: auto;
 
     display: flex;
     flex-direction: row;
@@ -19,236 +66,299 @@ body {
     padding-top: 7%;
 }
 
-.container-left-side {
-    width: 70%;
-    height: 100%;
-
-    background: #cdcbcb;
-
-    padding: 1%;
-
-    border-radius: 3px;
-}
-
-.container-right-side {
-    width: 30%;
-    /*height: 240px;*/
-    height: 100%;
-    padding: 10px;
-
-    background: #cdcbcb;
-}
-
-.bl-row {
-    background: white;
-    border-radius: 3px;
-
-    height: 100%;
-}
-
-.bl-row-padding {
-    padding: 10px;
-
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    background: white;
-    border-color: #cdcbcb;
-
-    border-bottom-width: thin;
-    border-bottom-color: #cdcbcb;
-    border-bottom-style: solid;
-}
-
-.button {
-    width: 28.1%;
-    height: 34px;
-
-    color: white;
-    background-color: blue;
-
-    padding: 0;
-    border: 0;
-
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px;
-
-    float: right;
-}
-/*.standard {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
+/*@media only screen and (min-width: 500px) {*/
+/*    .my-grand-container {*/
+/*        !*height: 100%;*!*/
+/*        flex-direction: column;*/
+/*    }*/
 /*}*/
 
-.textArea {
-    width: 70%;
-    height: 30px;
+.my-container-left-side {
+    width: 68%; height: 98%;
+    background: #DADADA;
+    padding: 1%;
+    border-radius: 4px;
+    /*min-width: 748px !important;*/
+    /*display: inline-block;*/
 
-    border-style: solid;
-    border-color: #cdcbcb;
-    color: #cdcbcb;
-
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-
-    padding-left: 1.5%;
-
-    border-width: 1px;
+    min-width: 748px;
+    position: static;
 }
 
-.bl-product {
-    height: 30px;
-
-    padding: 15px;
-
-    position: relative;
-
-    font-family: sans-serif;
-
-    border-bottom-width: thin;
-    border-bottom-color: #cdcbcb;
-    border-bottom-style: solid;
-
-    /*border-color: #cdcbcb white;*/
-    /*border-style: solid;*/
-    /*border-width: thin;*/
+.my-container-right-side {
+    width: 28%; height: 98%;
+    padding: 1%;
+    background: #DADADA;
 }
 
-.tomatoes {
-    float: left;
+.my-sub-container-left-side {
+    background: white;
+    border-radius: 4px;
+    height: 100%;
+}
 
-    height: 30px;
+.my-sub-container-right-side {
+    height: 100%;
+    width: 100%;
+
+    background: white;
+
+    border-radius: 4px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.add_or_del {
-    position: absolute;
-
-    right: 0;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-
+.my-textarea-plus-button-container {
     padding: 15px;
+
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
+    margin-left: auto; margin-right: auto;
+
+    background: white;
+    border-color: #DADADA;
+
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+
+    height: 34px;
+}
+
+.my-textarea-plus-button-sub-container {
+    height: 100%;
+}
+
+.my-button {
+    width: 14%; height: 100%;
+
+    color: white; background-color: #6880e1;
+
+    padding: 0; border: 0;
+
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+
+    box-sizing: border-box;
+}
+
+.my-textArea {
+    width: 85%; height: 100%;
+
+    border-style: solid; border-color: #DADADA;
+    border-width: 1px;
+
+    color: #DADADA;
+
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+
+    padding-left: 1.5%;
+
+    box-sizing: border-box;
+}
+
+.my-product-container {
+    height: 30px;
+    padding: 8px 16px;
+
+    position: relative;
+
+    font-family: sans-serif;
+
+    border-bottom-width: thin;
+    border-bottom-color: #DADADA;
+    border-bottom-style: solid;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.my-product-name {
+    height: 100%;
+    width: 33%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Helvetica Neue';
+    font-weight: lighter;
+}
+
+.my-minus-textarea-plus-container {
+    width: 33%;
+    padding: 8px 16px;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
-.subtraction-button {
-    width: 30px;
-    height: 30px;
+.my-buy-button-and-delete-button-container {
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.my-buy-button {
+    border: 0;
+    height: 100%; width: 75px;
+    margin-right: 5px;
+    border-radius: 4px;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+.my-delete-button {
+    color: white;
+    background: #d40000;
 
     border: 0;
+    height: 30px; width: 30px;
+    border-radius: 4px;
+}
 
+.my-subtraction-button {
+    width: 30px; height: 30px;
+    border: 0;
     background: #e699b5;
     color: white;
-
     border-radius: 15px;
+
 }
 
-.textArea_2 {
-    width: 30px;
-    height: 26px;
-
-    border: 0;
-    padding: 0;
-
+.my-textarea-counter {
+    width: 30px; height: 26px;
+    border: 0; padding: 0;
     margin: 3px 7px;
-
     border-radius: 3px;
-
     background: #ebe9e9;
-
     text-align: center;
 }
 
-.addition-button {
-    width: 30px;
-    height: 30px;
-
-    border: 0;
+.my-addition-button {
+    width: 30px; height: 30px;
 
     text-align: center;
 
-    background: #3ed339;
+    background: #21BA45;
     color: white;
 
-    border-radius: 15px;
+    transition: 0.5s;
+
+    border: 0; border-radius: 15px;
+}
+
+.my-addition-button:hover {
+    background: #1da43f;
+
 }
 
 .bl-title {
     font-family: sans-serif;
     padding: 5%;
 
-    height: 25%;
-    width: 100%;
+    height: 15%; width: 100%; /* а просто в процентах не хочет? */
 
-    border-bottom-color: #cdcbcb;
+    border-bottom-color: #DADADA;
     border-bottom-style: solid;
     border-bottom-width: thin;
 }
 
-.animated-button-container {
-    width: 16%;
-    height: 14%;
+.my-buy-list-container {
+    font-family: sans-serif;
+    padding: 5%;
 
-    padding-left: 4%;
-    margin-right: 80%;
+    height: 15%; width: 100%;
+
+    border-bottom-color: #DADADA;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+.my-block-in-buy-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    border-radius: 4px;
+    margin: 2px; padding: 7px;
+    font-size: x-small;
+    font-family: sans-serif;
+
+    height: 100%;
+    background: #E8E8E8;;
+    align-items: center;
+}
+.my-text-area-in-buy-list {
+    margin-right: 2px;
+}
+
+.my-circle-block-in-buy-list {
+    background: #ea7600;
+    color: white;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+}
+
+.animated-button-container {
+    width: 255px; height: 100px;
+
+    margin-left: 4%; margin-right: 80%;
 
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 0; left: 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*почему не работает с абсолют*/
 }
 
-.animated-button-top {
-    height: 50%;
-    width: 100%;
+.my-animated-button-on-top {
+    height: 50%; width: 100%;
 
     position: relative;
     top: 50%;
 
     background-color: darkviolet;
 
-    text-align: center;
-    font-weight: bold;
-    font-family: sans-serif;
-    color: white;
+    text-align: center; font-weight: bold;
+    font-family: sans-serif; color: white;
 
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 
     transition: all 1s ease;
 
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.animated-button-bottom {
-    height: 50%;
-    width: 100%;
+.my-animated-button-on-bottom {
+    height: 50%; width: 100%;
     visibility: hidden;
 
     background-color: darkviolet;
 
-    text-align: center;
-    font-size: small;
-    font-family: sans-serif;
-    color: white;
+    text-align: center; font-size: small;
+    font-family: sans-serif; color: white;
 
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -259,34 +369,50 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
-.animated-button-top:hover {
+.my-animated-button-on-top:hover {
     background-color: blue;
-    transform: translate(0,-100%);
+    transform: translate(0, -100%);
 }
-.animated-button-top:hover + .animated-button-bottom {
+
+.my-animated-button-on-top:hover + .my-animated-button-on-bottom {
     background-color: blue;
     visibility: visible;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-.new {
-    width: 55%;
-    height: 45%;
-    padding-left: 25%;
-    padding-right: 20%;
-    text-align: left;
+
+.my-created-by-text-block {
+    width: 55%; height: 45%;
+
+    padding-left: 25%; padding-right: 20%;
     padding-top: 5%;
-}
-.newp {
-    width: 55%;
-    height: 47%;
-    padding-left: 25%;
-    padding-right: 20%;
-    padding-bottom: 3%;
+
     text-align: left;
-    font-size: medium;
-    font-weight: bold;
+}
+
+.my-surname-text-block {
+    width: 55%; height: 47%;
+
+    padding-left: 25%; padding-right: 20%;
+    padding-bottom: 3%;
+
+    text-align: left;
+    font-size: medium; font-weight: bold;
+}
+@media print {
+    .my-animated-button-on-top {
+        visibility: hidden;
+
+    }
+    .my-animated-button-on-bottom {
+        visibility: visible;
+
+        color: black;
+
+        border-style: solid;
+        border-width: thick;
+        border-color: darkviolet;
+    }
 }
