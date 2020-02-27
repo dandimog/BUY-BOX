@@ -8,10 +8,9 @@ body {
     margin: 0;
 }
 
-/*:active, :hover, :focus {*/
-/*    outline: 0;*/
-/*    outline-offset: 0;*/
-/*}*/
+input {
+    outline: none;
+}
 
 button {
     outline: none;
@@ -19,7 +18,6 @@ button {
 
 [data-tooltip] {
     position: relative;
-
 }
 
 [data-tooltip]::after {
@@ -53,7 +51,7 @@ button {
 }
 
 .my-grand-container {
-    width: 1100px; height: 50%;
+    width: 1100px; height: 100%;
 
     background: #DADADA;
 
@@ -66,29 +64,34 @@ button {
     padding-top: 7%;
 }
 
-/*@media only screen and (min-width: 500px) {*/
-/*    .my-grand-container {*/
-/*        !*height: 100%;*!*/
-/*        flex-direction: column;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 748px) {
+    .my-grand-container {
+
+        flex-direction: column;
+
+        /*height: 100%;*/
+        /*position: static;*/
+    }
+}
 
 .my-container-left-side {
-    width: 68%; height: 98%;
+    width: 748px; height: 98%;
     background: #DADADA;
     padding: 1%;
     border-radius: 4px;
+
     /*min-width: 748px !important;*/
     /*display: inline-block;*/
 
-    min-width: 748px;
-    position: static;
+    /*min-width: 748px;*/
+    /*68*/
 }
 
 .my-container-right-side {
-    width: 28%; height: 98%;
+    width: 352px; height: 98%;
     padding: 1%;
     background: #DADADA;
+    /*display: inline-block;*/
 }
 
 .my-sub-container-left-side {
@@ -134,7 +137,7 @@ button {
 .my-button {
     width: 14%; height: 100%;
 
-    color: white; background-color: #6880e1;
+    color: white;
 
     padding: 0; border: 0;
 
@@ -150,7 +153,7 @@ button {
     border-style: solid; border-color: #DADADA;
     border-width: 1px;
 
-    color: #DADADA;
+    font-family: sans-serif;
 
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
@@ -172,20 +175,28 @@ button {
     border-bottom-color: #DADADA;
     border-bottom-style: solid;
 
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
     justify-content: space-between;
+
+    display: none;
+    /*visibility: hidden;*/
+
 }
 
 .my-product-name {
     height: 100%;
     width: 33%;
 
+    background: white;
+
+    border: none;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-family: 'Helvetica Neue';
-    font-weight: lighter;
+    font-family: sans-serif;
+
 }
 
 .my-minus-textarea-plus-container {
@@ -217,7 +228,6 @@ button {
 
 .my-delete-button {
     color: white;
-    background: #d40000;
 
     border: 0;
     height: 30px; width: 30px;
@@ -227,10 +237,10 @@ button {
 .my-subtraction-button {
     width: 30px; height: 30px;
     border: 0;
-    background: #e699b5;
+    opacity: 50%;
+
     color: white;
     border-radius: 15px;
-
 }
 
 .my-textarea-counter {
@@ -247,24 +257,16 @@ button {
 
     text-align: center;
 
-    background: #21BA45;
     color: white;
 
-    transition: 0.5s;
-
     border: 0; border-radius: 15px;
-}
-
-.my-addition-button:hover {
-    background: #1da43f;
-
 }
 
 .bl-title {
     font-family: sans-serif;
     padding: 5%;
 
-    height: 15%; width: 100%; /* а просто в процентах не хочет? */
+    height: 15%; width: 90%; /* а просто в процентах не хочет? */
 
     border-bottom-color: #DADADA;
     border-bottom-style: solid;
@@ -275,7 +277,7 @@ button {
     font-family: sans-serif;
     padding: 5%;
 
-    height: 15%; width: 100%;
+    width: 90%;
 
     border-bottom-color: #DADADA;
     border-bottom-style: solid;
@@ -284,11 +286,11 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
+    flex-wrap: wrap;
 }
 
 .my-block-in-buy-list {
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
     justify-content: center;
 
@@ -296,6 +298,8 @@ button {
     margin: 2px; padding: 7px;
     font-size: x-small;
     font-family: sans-serif;
+
+    display: none;
 
     height: 100%;
     background: #E8E8E8;;

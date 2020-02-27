@@ -5,13 +5,14 @@
 
     <title>My Page</title>
 
-<!--        <link-->
-<!--                rel="stylesheet"-->
-<!--                href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
-<!--        >-->
+    <!--        <link-->
+    <!--                rel="stylesheet"-->
+    <!--                href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+    <!--        >-->
 
-    <link rel="stylesheet" href="Styles.css">
-
+    <link href="Styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet/less" type="text/css" href="main"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 </head>
 
 <body>
@@ -20,71 +21,41 @@
 
     <div class="my-container-left-side">
 
-        <div class="my-sub-container-left-side">
+        <div id="my-sub-container-left-side" class="my-sub-container-left-side">
 
             <div class="my-textarea-plus-button-container">
 
                 <div class="my-textarea-plus-button-sub-container">
 
-                    <input type="text" value="Назва товару" class="my-textArea">
+                    <input id="input-field" type="text" placeholder="Назва товару" class="my-textArea">
 
-                    <button class="my-button">
-                        <b>Додати</b>
-                    </button>
+<!--                    <div >-->
+                        <button id="my-button" class="my-button">
+                            <b>Додати</b>
+                        </button>
+<!--                    </div>-->
 
-                </div>
-
-            </div>
-
-            <div class="my-product-container">
-
-                <div class="my-product-name">
-                    Помідори
-                </div>
-
-                <div class="my-minus-textarea-plus-container">
-
-                    <button data-tooltip="Tooltip" class="my-subtraction-button" onclick="minus()">
-                        <b>‒</b>
-                    </button>
-
-                    <input id="product-counter" type="text" value="1" class="my-textarea-counter">
-
-                    <button id="button" data-tooltip="Tooltip" class="my-addition-button" onclick="plus()">
-                        <b>+</b>
-                    </button>
-
-                </div>
-
-                <div class="my-buy-button-and-delete-button-container">
-
-                    <button class="my-buy-button">
-                        Куплено
-                    </button>
-
-                    <button data-tooltip="Tooltip" class="my-delete-button">
-                        <b>×</b>
-                    </button>
 
                 </div>
 
             </div>
 
-            <div class="my-product-container">
+            <div id="1" class="my-product-container">
 
-                <div class="my-product-name">
-                    Печиво
-                </div>
+                <label class="my-product-name">
+                    <input type="text" disabled="disabled" class="my-product-name" value="Помідори">
+                </label>
 
                 <div class="my-minus-textarea-plus-container">
 
                     <button data-tooltip="Tooltip" class="my-subtraction-button">
+<!--                        disabled="disabled"-->
                         <b>‒</b>
                     </button>
 
-                    <input type="text" value="1" class="my-textarea-counter">
+                    <input id="product-counter" type="text" value="1" class="my-textarea-counter" disabled="disabled">
 
-                    <button data-tooltip="Tooltip" class="my-addition-button">
+                    <button id="button" data-tooltip="Tooltip" class="my-addition-button">
                         <b>+</b>
                     </button>
 
@@ -92,9 +63,7 @@
 
                 <div class="my-buy-button-and-delete-button-container">
 
-                    <button class="my-buy-button">
-                        Куплено
-                    </button>
+                    <button class="my-buy-button">Куплено</button>
 
                     <button data-tooltip="Tooltip" class="my-delete-button">
                         <b>×</b>
@@ -104,39 +73,8 @@
 
             </div>
 
-            <div class="my-product-container">
-
-                <div class="my-product-name">
-                    Сир
-                </div>
-
-                <div class="my-minus-textarea-plus-container">
-
-                    <button data-tooltip="Tooltip" class="my-subtraction-button">
-                        <b>‒</b>
-                    </button>
-
-                    <input type="text" value="1" class="my-textarea-counter">
-
-                    <button data-tooltip="Tooltip" class="my-addition-button">
-                        <b>+</b>
-                    </button>
-
-                </div>
-
-                <div class="my-buy-button-and-delete-button-container">
-
-                    <button class="my-buy-button">
-                        Куплено
-                    </button>
-
-                    <button data-tooltip="Tooltip" class="my-delete-button">
-                        <b>×</b>
-                    </button>
-
-                </div>
-            </div>
         </div>
+
     </div>
 
     <div class="my-container-right-side">
@@ -147,41 +85,17 @@
                 <b>Залишилося</b>
             </div>
 
-            <div class="my-buy-list-container">
+            <div id="left" class="my-buy-list-container">
 
-                <div class="my-block-in-buy-list">
+                <div id="1buy" class="my-block-in-buy-list">
 
                     <div class="my-text-area-in-buy-list">
                         Помідори
                     </div>
 
-                    <div class="my-circle-block-in-buy-list">
+                    <span class="my-circle-block-in-buy-list">
                         1
-                    </div>
-
-                </div>
-
-                <div class="my-block-in-buy-list">
-
-                    <div class="my-text-area-in-buy-list">
-                        Печиво
-                    </div>
-
-                    <div class="my-circle-block-in-buy-list">
-                        1
-                    </div>
-
-                </div>
-
-                <div class="my-block-in-buy-list">
-
-                    <div class="my-text-area-in-buy-list">
-                        Сир
-                    </div>
-
-                    <div class="my-circle-block-in-buy-list">
-                        1
-                    </div>
+                    </span>
 
                 </div>
 
@@ -191,10 +105,14 @@
                 <b>Куплено</b>
             </div>
 
-            <div class="bl-title"></div>
+            <div id="bought" class="my-buy-list-container">
+
+            </div>
 
         </div>
+
     </div>
+
 </div>
 
 <div class="animated-button-container">
@@ -217,10 +135,11 @@
 
 </div>
 
-<script	type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script	type="text/javascript" src="BuyBox.js">	</script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="BuyBox.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
 
 </body>
+
 </html>

@@ -1,0 +1,101 @@
+@my-addition-button-color: #21BA45;
+@my-addition-button-color-hover: darken(@my-addition-button-color, 5%);
+@my-addition-button-color-active: darken(@my-addition-button-color-hover, 5%);
+
+button {
+  box-shadow: 0 0 0 1px rgba(34, 36, 38, .15) inset, 0 -0.3em 0 0 rgba(34, 36, 38, .15) inset;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.my-addition-button {
+  background: @my-addition-button-color;
+  cursor: pointer;
+  box-shadow: 0 3px darken(@my-addition-button-color-hover, 5%);
+}
+
+.my-addition-button:hover {
+  background: @my-addition-button-color-hover;
+}
+
+.my-addition-button:active {
+  box-shadow: 0 1px darken(@my-addition-button-color-hover, 5%);
+  background: @my-addition-button-color-active;
+}
+
+@subtraction-button-color: #d40000;
+@subtraction-button-color-hover: darken(@subtraction-button-color, 5%);
+@my-subtraction-button-color-active: darken(@subtraction-button-color-hover, 5%);
+
+.my-subtraction-button {
+  background: @subtraction-button-color;
+  cursor: pointer;
+  box-shadow: 0 3px darken(@subtraction-button-color-hover, 5%);
+}
+
+.my-subtraction-button:hover {
+  background: @subtraction-button-color-hover;
+}
+
+.my-subtraction-button:active {
+  background: @my-subtraction-button-color-active;
+  box-shadow: 0 1px darken(@subtraction-button-color-hover, 5%);
+}
+
+@my-buy-button-color: #f6f6f6;
+@my-buy-button-color-hover: darken(@my-buy-button-color, 5%);
+@my-buy-button-color-active: darken(@my-buy-button-color-hover, 5%);
+
+.my-buy-button {
+  background: @my-buy-button-color;
+  cursor: pointer;
+  //box-shadow: 0 3px darken(@my-buy-button-color-hover, 5%);
+  //box-shadow: 0 0 0 1px rgba(34,36,38,.15) inset, 0 -0.3em 0 0 rgba(34,36,38,.15) inset;
+}
+
+.my-buy-button:hover {
+  background: @my-buy-button-color-hover;
+}
+
+.my-buy-button:active {
+  background: @my-buy-button-color-active;
+  transform: none;
+}
+
+@my-delete-button-color: #d40000;
+@my-delete-button-color-hover: darken(@my-delete-button-color, 5%);
+@my-delete-button-color-active: darken(@my-delete-button-color-hover, 5%);
+
+.my-delete-button {
+  background: @my-delete-button-color;
+  cursor: pointer;
+}
+
+.my-delete-button:hover {
+  background: @my-delete-button-color-hover;
+}
+
+.my-delete-button:active {
+  background: @my-delete-button-color-active;
+  transform: none;
+}
+
+@my-button-color: #6880e1;
+@my-button-color-hover: darken(@my-button-color, 5%);
+@my-button-color-active: darken(@my-button-color-hover, 5%);
+
+.my-button {
+  background: @my-button-color;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background: @my-button-color-hover;
+}
+
+.my-button:active {
+  background: @my-button-color-active;
+  transform: none;
+}
